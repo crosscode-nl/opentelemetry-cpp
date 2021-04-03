@@ -30,12 +30,12 @@ if (DEFINED REPO_NAME)
   get_filename_component(SOURCE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../" ABSOLUTE)
   message("Using local source snapshot from ${SOURCE_PATH}")
 else()
-  # Fetch from GitHub master
+  # Fetch from GitHub main
   message("Fetching source code from GitHub...")
   vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO open-telemetry/opentelemetry-cpp
-    HEAD_REF master
+    HEAD_REF main
   )
 endif()
 
